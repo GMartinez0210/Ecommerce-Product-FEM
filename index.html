@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <!-- FavIcon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- My own css -->
+  <link rel="stylesheet" href="./styles/styles.css">
+  <!-- JQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <title>Frontend Mentor | E-commerce product page</title>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img class="logo" src="./images/logo.svg" alt="">
+
+      <nav class="nav-desktop">
+        <a href="#">Collections</a>
+        <a href="#">Men</a>
+        <a href="#">Women</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </nav>
+
+      <div class="cart-profile">
+        <img class="cart" src="./images/icon-cart.svg" alt="">
+        <img class="profile-photo" src="./images/image-avatar.png" alt="">
+      </div>
+
+      <div class="view-cart">
+        <p class="title-cart">Cart</p>
+        <div class="cart-container">
+          <p class="empty empty-cart"></p>
+          <table class="no-empty cart-table">
+            <tr>
+              <td><img class="cart-product" src="./images/image-product-1-thumbnail.jpg" alt=""></td>
+              <td>
+                <table class="cart-info">
+                  <tr>
+                    <td><span>Fall Limited Edition Sneakers</span></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span>$125.00 x</span>
+                      <span class="quantity">0</span>
+                    </td>
+                    <td><span class="total"></span></td>
+                  </tr>
+                </table>
+              </td>
+              <td><img class="cart-trash" src="./images/icon-delete.svg" alt=""></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </header>
+    
+    <main>
+      <section class="products">
+        <img class="main-product" src="./images/image-product-1.jpg" alt="">
+        <div class="more-products">
+          <img class="shown-product" src="./images/image-product-1-thumbnail.jpg" alt="">
+          <img src="./images/image-product-2-thumbnail.jpg" alt="">
+          <img src="./images/image-product-3-thumbnail.jpg" alt="">
+          <img src="./images/image-product-4-thumbnail.jpg" alt="">
+        </div>
+      </section>
+
+      <section class="description">
+        <h3>Sneaker Company</h3>
+        <h1>Fall Limited Edition Sneakers</h1>
+        <p>
+          These low-profile sneakers are your perfect casual wear companion. Featuring a 
+          durable rubber outer sole, they’ll withstand everything the weather can offer.
+        </p>
+
+        <div class="prices">
+          <h2 class="price">$125.00</h2>
+          <h2 class="desct">50%</h2>
+          <h2 class="total-price">$250.00</h2>
+        </div>
+
+        <div class="selling">
+          <div class="increasing">
+            <img class="minus-img" src="./images/icon-minus.svg" alt="">
+            <span class="quantity">0</span>
+            <img class="plus-img" src="./images/icon-plus.svg" alt="">
+          </div>
+          <button class="adding" type="button">
+            <img src="./images/icon-cart-white.svg" alt="">
+            <span>Add to the cart</span>
+          </button>
+        </div>
+      </section>
+    </main>
+  
+    <footer>
+      <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</p>
+      <p>Coded by <a href="https://www.frontendmentor.io/profile/GMartinez0210">Genaro Martinez</a>.</p>
+    </footer>
+  </div>
+</body>
+</html>
+
+<script src="./js/index.js"></script>
