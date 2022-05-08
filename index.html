@@ -12,28 +12,82 @@
   <title>Frontend Mentor | E-commerce product page</title>
 </head>
 <body>
+  <!-- Light box  -->
+  <div class="light-box">
+    <section class="products">
+      <div class="main-light-box">
+        <img class="light-box-img" src="./images/image-product-1.jpg" alt="">
+        
+        <!-- Light box next, previous and close -->
+        <div class="light-box-next">
+          <img src="./images/icon-next.svg" alt="">
+        </div>
+        <div class="light-box-previous">
+          <img src="./images/icon-previous.svg" alt="">
+        </div>
+        <div class="light-box-close">
+          <img src="./images/icon-close.svg" alt="">
+        </div>
+      </div>
+      <!-- More products light box -->
+      <div class="more-products-light-box">
+        <div class="shown-product">
+          <img src="./images/image-product-1-thumbnail.jpg" alt="">
+        </div>
+        <div>
+          <img src="./images/image-product-2-thumbnail.jpg" alt="">
+        </div>
+        <div>
+          <img src="./images/image-product-3-thumbnail.jpg" alt="">
+        </div>
+        <div>
+          <img src="./images/image-product-4-thumbnail.jpg" alt="">
+        </div>
+      </div>
+    </section>
+  </div>
+  
+  <!-- Container -->
   <div class="container">
+    <!-- Header -->
     <header>
       <img class="logo" src="./images/logo.svg" alt="">
 
       <nav class="nav-desktop">
-        <a href="#">Collections</a>
-        <a href="#">Men</a>
-        <a href="#">Women</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
+        <ul class="nav-content">
+          <li class="nav-item">
+            <a class="nav-link" href="#" aria-label="Collections">Collections</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" aria-label="Men">Men</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" aria-label="Women">Women</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" aria-label="About">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" aria-label="Contact">Contact</a>
+          </li>
+        </ul>
       </nav>
 
+      <!-- Cart -->
       <div class="cart-profile">
-        <img class="cart" src="./images/icon-cart.svg" alt="">
+        <div class="cart-icon">
+          <img class="cart" src="./images/icon-cart.svg" alt="">
+          <span class="cart-quantity empty">0</span>
+        </div>
         <img class="profile-photo" src="./images/image-avatar.png" alt="">
       </div>
 
+      <!-- Cart content -->
       <div class="view-cart">
         <p class="title-cart">Cart</p>
         <div class="cart-container">
-          <p class="empty empty-cart"></p>
-          <table class="no-empty cart-table">
+          <p class="empty-cart">No items. Cart is empty.</p>
+          <table class="empty cart-table">
             <tr>
               <td><img class="cart-product" src="./images/image-product-1-thumbnail.jpg" alt=""></td>
               <td>
@@ -44,30 +98,48 @@
                   <tr>
                     <td>
                       <span>$125.00 x</span>
-                      <span class="quantity">0</span>
+                      <span class="quantity-cart"></span>
                     </td>
-                    <td><span class="total"></span></td>
+                    <td class="total-container"><span class="total"></span></td>
                   </tr>
                 </table>
               </td>
               <td><img class="cart-trash" src="./images/icon-delete.svg" alt=""></td>
+            </tr>
+            <tr class="checkout-row">
+              <td class="checkout-container">
+                <button class="btn-checkout">
+                  <span>Checkout</span>
+                </button>
+              </td>
             </tr>
           </table>
         </div>
       </div>
     </header>
     
+    <!-- Main -->
     <main>
+      <!-- Products section -->
       <section class="products">
-        <img class="main-product" src="./images/image-product-1.jpg" alt="">
+        <img class="main-product light-box-open" src="./images/image-product-1.jpg" alt="">
         <div class="more-products">
-          <img class="shown-product" src="./images/image-product-1-thumbnail.jpg" alt="">
-          <img src="./images/image-product-2-thumbnail.jpg" alt="">
-          <img src="./images/image-product-3-thumbnail.jpg" alt="">
-          <img src="./images/image-product-4-thumbnail.jpg" alt="">
+          <div class="shown-product">
+            <img src="./images/image-product-1-thumbnail.jpg" alt="">
+          </div>
+          <div>
+            <img src="./images/image-product-2-thumbnail.jpg" alt="">
+          </div>
+          <div>
+            <img src="./images/image-product-3-thumbnail.jpg" alt="">
+          </div>
+          <div>
+            <img src="./images/image-product-4-thumbnail.jpg" alt="">
+          </div>
         </div>
       </section>
 
+      <!-- Description section -->
       <section class="description">
         <h3>Sneaker Company</h3>
         <h1>Fall Limited Edition Sneakers</h1>
@@ -76,12 +148,14 @@
           durable rubber outer sole, they’ll withstand everything the weather can offer.
         </p>
 
+        <!-- Prices -->
         <div class="prices">
           <h2 class="price">$125.00</h2>
           <h2 class="desct">50%</h2>
           <h2 class="total-price">$250.00</h2>
         </div>
 
+        <!-- Selling part -->
         <div class="selling">
           <div class="increasing">
             <img class="minus-img" src="./images/icon-minus.svg" alt="">
@@ -96,6 +170,7 @@
       </section>
     </main>
   
+    <!-- Footer -->
     <footer>
       <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</p>
       <p>Coded by <a href="https://www.frontendmentor.io/profile/GMartinez0210">Genaro Martinez</a>.</p>
@@ -104,4 +179,5 @@
 </body>
 </html>
 
+<!-- My own js -->
 <script src="./js/index.js"></script>
