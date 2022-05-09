@@ -41,10 +41,12 @@ header {
     right: 0;
     bottom: 0;
 
+    z-index: 2;
+
     background-color: rgba(0, 0, 0, 0.75)
 }
 .nav-mobile {
-    width: clamp(200px, 60%, 300px);
+    width: clamp(150px, 60%, 250px);
     height: 100vh;
     z-index: 3;
 
@@ -57,10 +59,12 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    gap: 5rem;
+    gap: 4rem;
 
     padding-top: 2rem;
     padding-left: 2rem;
+
+    transition: 0.25s ease-in-out;
 }
 .nav-mobile img {
     width: 25px;
@@ -73,6 +77,14 @@ header {
 .nav-mobile .nav-content .nav-item .nav-link {
     padding-block: 1rem;
     margin: 0;
+}
+
+/* TO OPEN THE MOBILE NAV */
+.dark-background.off {
+    display: none;
+}
+.nav-mobile.off {
+    left: -100%;
 }
 
 /*  NAV FOR DESKTOP*/
@@ -124,7 +136,8 @@ header {
     cursor: pointer;
 }
 .profile-photo {
-    width: 30%;
+    width: 35px;
+    height: 35px;
     border: 2px solid hsl(26, 100%, 55%);
     border-radius: 50%;
 }
@@ -157,6 +170,8 @@ header {
     position: absolute;
     top: calc(100%);
     right: 0;
+
+    z-index: 2;
 }
 /* TITLE FOR THE CART */
 .title-cart {
@@ -190,6 +205,44 @@ main {
     justify-content: space-between;
     align-items: center;
     margin-block: 3rem;
+}
+
+/* SLIDER FOR MOBILE DESIGN */
+.product-slider {
+    width: 100%;
+    display: none;
+}
+.slider {
+    width: 100%;
+    position: relative;
+}
+.slider-img {
+    width: 100%;
+    object-fit: cover;
+}
+.slider-next,
+.slider-previous {
+    width: 40px;
+    height: 40px;
+
+    display: grid;
+    place-items: center;
+
+    background-color: hsl(100, 100%, 100%);
+    border-radius: 50%;
+
+    position: absolute;
+    top: calc(50% - 25px);
+}
+.slider-next {
+    right: 15px;
+}
+.slider-previous {
+    left: 15px;
+}
+.slider-next img,
+.slider-previous img {
+    height: 15px;
 }
 
 .products,
@@ -503,8 +556,73 @@ footer p {
 
 /* TABLET DESIGN */
 @media (max-width: 768px) {
+    /* ADDING SOME PADDING TO THE HEADER */
+    header {
+        padding-block: 1rem;
+    }
+    /* HIDDING THE NAV FOR DESKTOP*/
+    .nav-desktop {
+        display: none;
+    }
+    /* REDIRACTING THE MAIN */
     main {
+        width: 100%;
         flex-direction: column;
         gap: 3rem;
+    }
+    /* MAKING LITTLE BIGGER THE CART PROFILE */
+    .cart-profile {
+        width: auto;
+        gap: 1rem;
+    }
+    /* CHANGING THE WIDTH OF THE DESCRIPTION SECTION */
+    .description {
+        width: clamp(260px, 80%, 450px);
+    }
+    /* ADJUSTING THE VIEW-CART WIDTH */
+    .view-cart {
+        width: 100%;
+        top: calc(100% + 1rem);
+    }
+}
+
+/* MOBILE DESIGN */
+@media (max-width: 576px) {
+    main {
+        margin-block: 0;
+    }
+    /* HIDDING THE PRODUCTS SECTION*/
+    .products {
+        display: none;
+    }
+    /* APPEARING THE SLIDER */
+    .product-slider {
+        display: block;
+    }
+    /* ADJUSTING THE DESCRIPTION */
+    .description h1 {
+        font-size: 2rem;
+    }
+    /* FOOTER ALIGNING */
+    footer {
+        text-align: center;
+        margin-top: 3rem;
+    }
+}
+
+@media (max-width: 425px) {
+    /* ADJUSTING THE VIEW-CART WIDTH */
+    .view-cart {
+        width: 120%;
+        right: -10%;
+    }
+    .cart-table {
+        margin-inline: 0.5rem;
+    }
+}
+
+@media (max-width: 335px) {
+    .cart-info span {
+        font-size: 0.9rem;
     }
 }
