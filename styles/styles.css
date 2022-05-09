@@ -83,10 +83,12 @@ header {
 .dark-background.off {
     display: none;
 }
+.menu-icon {
+    display: none;
+}
 .nav-mobile.off {
     left: -100%;
 }
-
 /*  NAV FOR DESKTOP*/
 .nav-content {
     display: flex;
@@ -559,6 +561,10 @@ footer p {
     /* ADDING SOME PADDING TO THE HEADER */
     header {
         padding-block: 1rem;
+    }
+    /* SHOWING THE NAV FOR MOBILE */
+    .menu-icon {
+        display: block;
     }
     /* HIDDING THE NAV FOR DESKTOP*/
     .nav-desktop {
