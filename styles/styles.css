@@ -619,6 +619,13 @@ footer p {
     .cart-table {
         margin-inline: 0.5rem;
     }
+    .selling {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .selling > * {
+        width: 100%;
+    }
 }
 
 @media (max-width: 335px) {
