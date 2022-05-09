@@ -33,6 +33,47 @@ header {
 
     position: relative;
 }
+/* NAV FOR MOBILE */
+.dark-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-color: rgba(0, 0, 0, 0.75)
+}
+.nav-mobile {
+    width: clamp(200px, 60%, 300px);
+    height: 100vh;
+    z-index: 3;
+
+    background-color: hsl(100, 100%, 100%);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 5rem;
+
+    padding-top: 2rem;
+    padding-left: 2rem;
+}
+.nav-mobile img {
+    width: 25px;
+    height: 25px;
+}
+.nav-mobile .nav-content {
+    flex-direction: column;
+    gap: 0;
+}
+.nav-mobile .nav-content .nav-item .nav-link {
+    padding-block: 1rem;
+    margin: 0;
+}
 
 /*  NAV FOR DESKTOP*/
 .nav-content {
@@ -457,5 +498,13 @@ footer p {
 @media (max-width: 1024px) {
     main {
         width: 90%;
+    }
+}
+
+/* TABLET DESIGN */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        gap: 3rem;
     }
 }
