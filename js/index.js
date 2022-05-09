@@ -186,3 +186,46 @@ const light_box_open = $(".light-box-open").click(() => {
 const light_box_close = $(".light-box-close").click(() => {
     $(".light-box").css({"left": "-100%", "filter": "opacity(0)"})
 })
+
+/* NAVBAR FOR MOBILE */
+const nav_mobile = $(".nav-mobile")
+const dark_background = $(".dark-background")
+
+// Opening the mobile nav
+const nav_mobile_open = $(".menu-icon").click(() => {
+    nav_mobile.toggleClass("off")    
+    dark_background.toggleClass("off")
+})
+
+// Closing the mobile nav
+const nav_mobile_close = $(".nav-mobile-close").click(() => {
+    nav_mobile.toggleClass("off")    
+    dark_background.toggleClass("off")
+})
+
+/* PRODUCT SLIDER */
+const slider_img = $(".slider-img")
+
+// Next slider img 
+const slider_next = $(".slider-next").click(() => {
+    const long = main_imgs.length - 1
+    let index = main_imgs.indexOf(slider_img.attr("src"))
+    if (index == long) {
+        slider_img.attr("src", `${main_imgs[0]}`)
+    }
+    else {
+        slider_img.attr("src", `${main_imgs[index + 1]}`)
+    }
+}) 
+
+// Previous slider img 
+const sldier_previous = $(".slider-previous").click(() => {
+    const long = main_imgs.length - 1
+    let index = main_imgs.indexOf(slider_img.attr("src"))
+    if (index == 0) {
+        slider_img.attr("src", `${main_imgs[long]}`)
+    }
+    else {
+        slider_img.attr("src", `${main_imgs[index - 1]}`)
+    }
+})
